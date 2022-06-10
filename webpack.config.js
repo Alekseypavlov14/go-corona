@@ -38,8 +38,10 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: 'style/style.css'}),
     new CleanWebpackPlugin(),
     new CopyPlugin({
-      from: path.resolve(__dirname, 'src', 'img'),
-      to: path.resolve(__dirname, 'build', 'img')
+      patterns: [{
+        from: path.resolve(__dirname, 'src', 'img'),
+        to: path.resolve(__dirname, 'build', 'img')
+      }]
     })
   ]
 }

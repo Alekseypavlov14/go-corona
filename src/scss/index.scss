@@ -25,9 +25,23 @@ html, body {
 }
 
 .header {
+  .__container {
+    display: flex;
+  }
+
   &__logo {}
-  &__menu {}
-  &__button {}
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  &__button {
+    flex: 0 0 252px;
+  }
+}
+
+.button {
+  &_blue {}
 }
 
 .menu {
@@ -36,8 +50,4 @@ html, body {
   &__link {}
 }
 
-.footer {
-}
-.button{
-  &_blue {}
-}
+.footer {}
