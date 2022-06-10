@@ -23,3 +23,21 @@ html, body {
   max-width: 1057px;
   margin: 0px auto;
 }
+
+.header {
+  &__logo {}
+  &__menu {}
+  &__button {}
+}
+
+.menu {
+  &__list {}
+  &__item {}
+  &__link {}
+}
+
+.footer {
+}
+.button{
+  &_blue {}
+}
