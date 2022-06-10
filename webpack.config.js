@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
@@ -5,8 +6,9 @@ const path = require('path')
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build')
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'build'),
+    clean: true
   },
   mode: 'production',
   devServer: {
@@ -23,7 +25,7 @@ module.exports = {
       {
         test: /\.s[ac]ss$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
         ]
@@ -32,6 +34,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({ filename: 'style/style.css'}),
+    new CleanWebpackPlugin()
   ]
 }
