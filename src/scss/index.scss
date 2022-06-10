@@ -1,8 +1,25 @@
 @import './null.scss';
 @import './vars.scss';
 
-body {
+html, body {
+  height: 100%;
   font-family: 'Rubik', sans-serif;
   font-size: 12px;
   color: $text-color;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.__container {
+  max-width: 1057px;
+  margin: 0px auto;
 }
