@@ -23,17 +23,14 @@ html, body {
   max-width: 1087px;
   margin: 0px auto;
   padding: 0px 15px;
-
   // PC
   @media (max-width: 1087px) {
     max-width: 970px;
   }
-
   // Tablet
   @media (max-width: 991.98px) {
     max-width: 750px;
   }
-
   // Mobile 
   @media (max-width: 767.98px) {
     max-width: none;
@@ -60,6 +57,11 @@ html, body {
   &__logo {
     position: relative;
     z-index: 5;
+
+    @media (max-width: 479.98px ) {
+      flex: 0 0 40px;
+      overflow: hidden;
+    }
   }
 
   &__menu {
@@ -76,13 +78,6 @@ html, body {
 
     @media (max-width: 991.98px) {
       flex: 0 0 170px;
-    }
-  }
-
-  @media (max-width: 479.98px ) {
-    &__logo {
-      flex: 0 0 40px;
-      overflow: hidden;
     }
   }
 }
