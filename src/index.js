@@ -4,6 +4,8 @@ import './scss/index.scss'
 const burgerButton = document.getElementById('menu__icon')
 const menu = document.getElementById('menu')
 
-burgerButton.onclick = () => {
+burgerButton.onclick = (event) => {
+  event.preventDefault()
   menu.classList.toggle('--opened')
+  burgerButton.classList.toggle('--opened')
 }

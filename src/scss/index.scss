@@ -165,11 +165,26 @@ html, body {
         content: '';
         background-color: #000;
         height: 2px;
+        transform-origin: center;
+        transition: transform 0.3s ease 0s;
       }
 
       span {
         height: 2px;
         background-color: #000;
+      }
+
+      &.--opened {
+        span {
+          visibility: hidden;
+          opacity: 0;
+        }
+        &::before {
+          transform: translateY(8px) rotate(45deg);
+        }
+        &::after {
+          transform: translateY(-8px) rotate(-45deg);
+        }
       }
     }
   }
