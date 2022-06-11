@@ -25,8 +25,16 @@ html, body {
 }
 
 .header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+
   .__container {
     display: flex;
+    align-items: center;
+    min-height: 114px;
   }
 
   &__logo {}
@@ -37,17 +45,58 @@ html, body {
 
   &__button {
     flex: 0 0 252px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
 .button {
-  &_blue {}
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.14em;
+  padding: 14px 30px;
+  border-radius: 5px;
+  color: #fcfdfe;
+  transition: background-color 0.3s ease 0s;
+  background-color: #EC5863;
+
+  &:hover {
+    background-color: #f37a82;
+  }
+
+  &_blue {
+    background-color: #4285F4;
+
+    &:hover {
+      background-color: #70a3f7;
+    }
+  }
 }
 
 .menu {
-  &__list {}
-  &__item {}
-  &__link {}
+  display: flex;
+  justify-content: flex-end;
+
+  &__list {
+    display: flex;
+  }
+  
+  &__item {
+    margin-right: 40px;
+  }
+  &__link {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #000;
+    letter-spacing: 1px;
+  }
 }
 
 .footer {}
