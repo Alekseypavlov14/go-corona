@@ -487,14 +487,14 @@ html, body {
 
     img {
       position: relative;
-      z-index: 5;
+      z-index: 50;
       max-width: 100%;
     }
 
     &::after {
       content: '';
       position: absolute;
-      z-index: 2;
+      z-index: 45;
       left: 12px;
       bottom: -12px;
       width: 206px;
@@ -511,9 +511,53 @@ html, body {
   background-color: #fafbfd;
   padding: 103px 0px 116px 0px;
 
-  .__container {}
-  &__statistics {
-    margin: 0px 0px 80px 0px;
+  @media (max-width: 479.98px) {
+    padding: 40px 0px;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: 767.98px) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    padding: 0px 30px 0px 0px;
+
+    @media (max-width: 767.98px) {
+      padding: 0;
+      margin: 0px 0px 30px 0px;
+    }
+  }
+
+  &__text-block {
+    max-width: 400px;
+  }
+
+  &__video {
+    flex: 0 1 50%;
+    padding: 0px 0px 30% 0px;
+    position: relative;
+
+    @media (max-width: 767.98px) {
+      padding: 0px 0px 58% 0px;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -523,12 +567,19 @@ html, body {
   border-radius: 16px;
   position: relative;
 
+  @media (max-width: 767.98px) {
+    .decor-item {
+      display: none;
+    }
+  }
+
   &__body {
     position: relative;
     z-index: 50;
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+    margin: 0px 0px 80px 0px;
   }
 }
 
@@ -537,6 +588,19 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 767.98px) {
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  @media (max-width: 479.98px) {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
 
   &__item {
     flex: 0 0 fit-content;
