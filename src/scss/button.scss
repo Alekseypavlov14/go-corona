@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.14em;
+  padding: 14px 30px;
+  border-radius: 5px;
+  color: #fcfdfe;
+  transition: background-color 0.3s ease 0s;
+  background-color: #EC5863;
+
+  &:hover {
+    background-color: #f37a82;
+  }
+
+  &_blue {
+    background-color: #4285F4;
+
+    &:hover {
+      background-color: #70a3f7;
+    }
+  }
+}

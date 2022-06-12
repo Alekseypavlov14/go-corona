@@ -1,0 +1,131 @@
+.experts {
+  background-color: #FAFBFD;
+  padding: 103px 0px 116px 0px;
+
+  @media (max-width: 767.98px) {
+    padding: 60px 0px 30px 0px;
+  }
+
+  @media (max-width: 479.98px) {
+    padding: 40px 0px;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: 767.98px) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    padding: 0px 30px 0px 0px;
+
+    @media (max-width: 767.98px) {
+      padding: 0;
+      margin: 0px 0px 30px 0px;
+    }
+  }
+
+  &__text-block {
+    max-width: 400px;
+  }
+
+  &__video {
+    flex: 0 1 50%;
+    padding: 0px 0px 28% 0px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 767.98px) {
+      padding: 0px 0px 58% 0px;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// =================================================== //
+
+.statistics-experts {
+  max-width: 655px;
+  margin: 0 auto;
+  border-radius: 16px;
+  position: relative;
+
+  @media (max-width: 767.98px) {
+    .decor-item {
+      display: none;
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 20;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+    margin: 0px 0px 80px 0px;
+  }
+}
+
+// ===================================================== //
+
+.body-statistics-experts {
+  padding: 25px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 767.98px) {
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  @media (max-width: 479.98px) {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    flex: 0 0 fit-content;
+    text-align: center;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    color: #EC5863;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0.37em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
